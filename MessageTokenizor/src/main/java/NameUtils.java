@@ -4,7 +4,7 @@ import java.util.List;
 public class NameUtils {
 
     public static boolean isClassName(String name){
-        if(!isAlpha(name.charAt(0))||!isCapitalized(name.charAt(0))){
+        if(name==null||name.length()<1||!isAlpha(name.charAt(0))||!isCapitalized(name.charAt(0))){
             return false;
         }
 
@@ -27,7 +27,7 @@ public class NameUtils {
     }
 
     public static boolean isMethodName(String name){
-        if(!isAlpha(name.charAt(0))||isCapitalized(name.charAt(0))||isStaticVarName(name)){
+        if(name==null||name.length()<1||!isAlpha(name.charAt(0))||isCapitalized(name.charAt(0))||isStaticVarName(name)){
             return false;
         }
         int times = 0;
@@ -40,7 +40,7 @@ public class NameUtils {
     }
 
     public static boolean isStaticVarName(String name){
-        if(name.length()<=1||!name.contains("_")){
+        if(name==null||name.length()<1||name.length()<=1||!name.contains("_")){
             return false;
         }
         for(char c : name.toCharArray()){

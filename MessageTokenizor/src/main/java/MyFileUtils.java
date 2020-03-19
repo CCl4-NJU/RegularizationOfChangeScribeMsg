@@ -45,9 +45,14 @@ public class MyFileUtils {
         String line = null;
 
         String regex = "\\W+";
+
         boolean firstLine = true;
         msgTokenWriter.write("[");
         while((line=rawMsgReader.readLine())!=null){
+
+            int totalNum = 0;
+            int maxNum = 20; // max number of msg token
+
             String[] tokensList = line.split(regex);
             StringBuilder dataLine = new StringBuilder();
             if(!firstLine){
@@ -65,8 +70,11 @@ public class MyFileUtils {
                     dataLine.append(", ");
                 }
                 dataLine.append("\"").append(token).append("\"");
-
+                totalNum++;
                 firstWord = false;
+                if(totalNum >= maxNum){
+                    break;
+                }
             }
             dataLine.append("]");
             msgTokenWriter.write(dataLine.toString());
@@ -106,7 +114,7 @@ public class MyFileUtils {
 
             for(String subConnectedVar : connectedVars){
                 if(subConnectedVar.equals("<nl>")){
-                    tempTokenList.add(subConnectedVar);
+                    //tempTokenList.add(subConnectedVar);
                     continue;
                 }
                 int len = subConnectedVar.length();
@@ -126,11 +134,14 @@ public class MyFileUtils {
                             tempTokenList.add(tempToken.toString());
                             tempToken = new StringBuilder();
                         }
-                        tempTokenList.add(String.valueOf(c));
+                        //tempTokenList.add(String.valueOf(c));
                         index++;
                     }
                 }
             }
+
+            int totalNum = 1; //take <nb> in count
+            int maxNum = 200; //max number of diff text token
 
             if(!firstLine){
                 dataLine.append(",\n");
@@ -167,6 +178,11 @@ public class MyFileUtils {
                 } else{
                     attLine.append(", []");
                 }
+
+                totalNum++;
+                if(totalNum>=maxNum){
+                    break;
+                }
             }
             dataLine.append("]");
             markLine.append("]");
@@ -186,16 +202,18 @@ public class MyFileUtils {
         diffAttWriter.close();
     }
 
-    public static void generateVariable(String diffTextPath, String variablePath)throws Exception{
+    public static void generateVariable(String diffTextPath, String msgTextPath, String variablePath)throws Exception{
         BufferedReader diffTextReader = new BufferedReader(new FileReader(new File(diffTextPath)));
+        BufferedReader msgTextReader = new BufferedReader(new FileReader(new File(msgTextPath)));
         BufferedWriter variableWriter = new BufferedWriter(new FileWriter(new File(variablePath)));
 
         variableWriter.write("[");
 
         String line = null;
+        String msgLine = null;
         boolean firstLine = true;
 
-        while((line=diffTextReader.readLine())!=null){
+        while((line=diffTextReader.readLine())!=null&&((msgLine=msgTextReader.readLine())!=null)){
             StringBuilder tempGroup = new StringBuilder();
 
             if(!firstLine){
@@ -233,6 +251,39 @@ public class MyFileUtils {
                     } else{
                         if(!ifContains){
                             varKeys.add(word);
+                            varVals.add("v"+String.valueOf(vIndex));
+                            vIndex++;
+                        }
+                    }
+                }
+            }
+
+            msgLine = msgLine.replaceAll("\\\\t"," ")
+                    .replaceAll("\\\\n", " <nl> ")
+                    .replaceAll("\\\\\"", " ");
+
+            String[] wordList2 = msgLine.split("\\W+");
+            for(String word2:wordList2){
+                boolean isC = NameUtils.isClassName(word2);
+                boolean isM = NameUtils.isMethodName(word2);
+                boolean isV = NameUtils.isStaticVarName(word2);
+                if(isC||isM||isV){
+                    boolean ifContains = varKeys.contains(word2);
+                    if(isC){
+                        if(!ifContains){
+                            varKeys.add(word2);
+                            varVals.add("c"+String.valueOf(cIndex));
+                            cIndex++;
+                        }
+                    } else if(isM){
+                        if(!ifContains){
+                            varKeys.add(word2);
+                            varVals.add("m"+String.valueOf(mIndex));
+                            mIndex++;
+                        }
+                    } else{
+                        if(!ifContains){
+                            varKeys.add(word2);
                             varVals.add("v"+String.valueOf(vIndex));
                             vIndex++;
                         }

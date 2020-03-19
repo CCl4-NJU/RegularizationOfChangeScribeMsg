@@ -43,6 +43,7 @@ public class Main {
             );
             MyFileUtils.generateVariable(
                     "G:\\DiffCommitFile\\ouput\\difftext_v2.txt",
+                    "G:\\DiffCommitFile\\ouput\\msgtext_v2.txt",
                     "G:\\nju.edu\\RegularizationOfChangeScribeMsg\\MessageTokenizor\\src\\main\\resources\\test-result\\variable.json"
                     );
         } catch (Exception e){
