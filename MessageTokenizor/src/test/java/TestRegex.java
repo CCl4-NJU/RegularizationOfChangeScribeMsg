@@ -12,9 +12,10 @@ public class TestRegex {
 
     @Test
     public void testSplitSign(){
-        String line = "&&com.ss..r&&";
-        System.out.println(line.split("\\W").length);
-        for(String s : line.split("\\W")){
+        String regex = "\\W+";
+        String line = "This is @@@ sss bb _sdd SE_SED";
+        System.out.println(line.split(regex).length);
+        for(String s : line.split(regex)){
             System.out.println(s);
         }
     }

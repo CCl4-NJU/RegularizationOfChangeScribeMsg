@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f05b5803-c564-48f6-b9c8-431e624a140f" name="Default Changelist" comment="" />
+    <list default="true" id="f05b5803-c564-48f6-b9c8-431e624a140f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MessageTokenizor.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyFileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyFileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NameUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NameUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/difftext_immutables.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/msgtext_immutables.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test-result/diffAtt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test-result/diffMark.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test-result/diffText.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test-result/diffToken.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test-result/msgText.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test-result/msgToken.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test-result/variable.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestRegex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRegex.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,39 +35,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+            <state relative-caret-position="351">
+              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/diffText.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="204" selection-start-column="204" selection-end-column="204" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/diffMark.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/diffAtt.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/variableV12.json">
-          <provider selected="true" editor-type-id="LargeFileEditor">
-            <state>
-              <caret column="87" selection-start-column="87" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -58,43 +47,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/NameUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1092">
-              <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+            <state relative-caret-position="364">
+              <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#splitCamelName#0;class#NameUtils#0" />
-                <element signature="method#splitStaticVarName#0;class#NameUtils#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/variable.json">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MyFileUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+            <state relative-caret-position="134">
+              <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#generateMsg#0;class#MyFileUtils#0" />
+                <element signature="method#generateDiffTokenAndMarkAndAtt#0;class#MyFileUtils#0" />
+                <element signature="method#generateVariable#0;class#MyFileUtils#0" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/msgToken.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/diffToken.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-24">
-              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/msgText.json">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -109,19 +84,25 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>SINGLE</find>
+      <find>email</find>
+      <find>email&quot;, &quot;lookup</find>
+      <find>_</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/test/java/TestUtils.java" />
         <option value="$PROJECT_DIR$/src/main/resources/test-result/difftext_immutables.json" />
-        <option value="$PROJECT_DIR$/src/test/java/TestRegex.java" />
         <option value="$PROJECT_DIR$/src/main/resources/difftext_immutables.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MyFileUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/NameUtils.java" />
         <option value="$PROJECT_DIR$/src/main/resources/test-result/variable.json" />
+        <option value="$PROJECT_DIR$/src/test/java/TestRegex.java" />
+        <option value="$PROJECT_DIR$/src/main/java/NameUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MyFileUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -138,12 +119,12 @@
     <option name="width" value="1885" />
     <option name="height" value="1235" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,13 +182,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -306,13 +289,11 @@
       <workItem from="1583824923597" duration="17185000" />
       <workItem from="1583889682940" duration="11512000" />
       <workItem from="1583926597254" duration="1063000" />
+      <workItem from="1584585559764" duration="3214000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestUtils_testSplitStaticVarName - 2020.03.10 at 17h 39m 03s.xml">
-      <configuration name="TestUtils.testSplitStaticVarName" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestRegex_testRegexReplace - 2020.03.11 at 10h 08m 11s.xml">
       <configuration name="TestRegex.testRegexReplace" configurationId="JUnit" />
     </history-entry>
@@ -340,14 +321,18 @@
     <history-entry file="TestRegex_testSplitSign - 2020.03.11 at 10h 34m 21s.xml">
       <configuration name="TestRegex.testSplitSign" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestRegex_testSplitSign - 2020.03.19 at 10h 51m 11s.xml">
+      <configuration name="TestRegex.testSplitSign" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29760000" />
+    <option name="totallyTimeSpent" value="32974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14966443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -357,7 +342,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3252841" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35185185" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39914772" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -416,24 +401,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/MyFileUtils.java</url>
-          <line>211</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/MyFileUtils.java</url>
-          <line>208</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="jar://D:/Java/jdk1.8.0_201/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -456,57 +423,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/msgVOriginal.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-613268" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/msgtextV12.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret column="439" lean-forward="true" selection-start-column="439" selection-end-column="439" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/word2indexVOriginal.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/varV12.json" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/difftextV12.json">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="279292">
-          <caret column="1111619" selection-start-column="1111613" selection-end-column="1111619" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestRegex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/diffattVOriginal.json">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="3354">
-          <caret column="14389" selection-start-column="14389" selection-end-column="14389" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/difftokenVOriginal.json">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="182">
-          <caret column="836" selection-start-column="836" selection-end-column="836" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/diffmarkVOriginal.json">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="130">
-          <caret column="585" selection-start-column="585" selection-end-column="585" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/difftext_immutables.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
@@ -514,33 +434,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MyFileUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/msgtoken.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5460">
-          <caret line="239" column="56" selection-start-line="239" selection-start-column="56" selection-end-line="239" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#changeTextToJson#0;class#MyFileUtils#0" />
-          </folding>
+        <state relative-caret-position="383">
+          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/difftextV12.json">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="203">
+          <caret column="1111824" selection-start-column="1111823" selection-end-column="1111824" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/diffmarkVOriginal.json">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="104">
+          <caret column="585" selection-start-column="585" selection-end-column="585" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/variableV12.json">
       <provider selected="true" editor-type-id="LargeFileEditor">
-        <state>
-          <caret column="87" selection-start-column="87" selection-end-column="87" />
+        <state relative-caret-position="203">
+          <caret column="1466" selection-start-column="1465" selection-end-column="1466" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/difftokenVOriginal.json">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="156">
+          <caret column="865" selection-start-column="864" selection-end-column="865" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/msgtextV12.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret column="9040" selection-start-column="9039" selection-end-column="9040" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestRegex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/msgVOriginal.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret column="19733" selection-start-column="19733" selection-end-column="19733" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/diffattVOriginal.json">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="203">
+          <caret column="3686" selection-start-column="3671" selection-end-column="3686" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/NameUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+        <state relative-caret-position="364">
+          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#splitCamelName#0;class#NameUtils#0" />
-            <element signature="method#splitStaticVarName#0;class#NameUtils#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyFileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#generateMsg#0;class#MyFileUtils#0" />
+            <element signature="method#generateDiffTokenAndMarkAndAtt#0;class#MyFileUtils#0" />
+            <element signature="method#generateVariable#0;class#MyFileUtils#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/difftoken.json">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -551,36 +536,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/msgToken.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/msgText.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/diffToken.json">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/diffatt.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        <state relative-caret-position="134888">
+          <caret line="5188" column="69" selection-start-line="5188" selection-start-column="69" selection-end-line="5188" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/diffText.json">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/diffmark.json">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/difftext.json">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="468">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
         <state>
           <caret column="204" selection-start-column="204" selection-end-column="204" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/diffMark.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/diffAtt.json">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/msgtext.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1612">
+          <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        <state relative-caret-position="351">
+          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

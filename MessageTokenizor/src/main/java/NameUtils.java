@@ -40,7 +40,7 @@ public class NameUtils {
     }
 
     public static boolean isStaticVarName(String name){
-        if(name.length()<=1){
+        if(name.length()<=1||!name.contains("_")){
             return false;
         }
         for(char c : name.toCharArray()){

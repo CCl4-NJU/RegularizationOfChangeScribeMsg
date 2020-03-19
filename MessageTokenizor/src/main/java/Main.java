@@ -23,19 +23,27 @@ public class Main {
 
     public static void main(String[] args){
         try {
-//            MyFileUtils.changeTextToJson(
-//                    "G:\\nju.edu\\MessageTokenizor\\src\\main\\resources\\difftext_immutables.txt",
-//                    "G:\\nju.edu\\MessageTokenizor\\src\\main\\resources\\test-result\\diffText.json"
-//            );
-//            MyFileUtils.generateDiffTokenAndMarkAndAtt(
-//                    "G:\\nju.edu\\MessageTokenizor\\src\\main\\resources\\difftext_immutables.txt",
-//                    "G:\\nju.edu\\MessageTokenizor\\src\\main\\resources\\test-result\\diffToken.json",
-//                    "G:\\nju.edu\\MessageTokenizor\\src\\main\\resources\\test-result\\diffMark.json",
-//                    "G:\\nju.edu\\MessageTokenizor\\src\\main\\resources\\test-result\\diffAtt.json"
-//            );
+            MyFileUtils.changeTextToJson(
+                    "G:\\DiffCommitFile\\ouput\\difftext_v2.txt",
+                    "G:\\nju.edu\\RegularizationOfChangeScribeMsg\\MessageTokenizor\\src\\main\\resources\\test-result\\difftext.json"
+            );
+            MyFileUtils.changeTextToJson(
+                    "G:\\DiffCommitFile\\ouput\\msgtext_v2.txt",
+                    "G:\\nju.edu\\RegularizationOfChangeScribeMsg\\MessageTokenizor\\src\\main\\resources\\test-result\\msgtext.json"
+                    );
+            MyFileUtils.generateMsg(
+                    "G:\\DiffCommitFile\\ouput\\msgtext_v2.txt",
+                    "G:\\nju.edu\\RegularizationOfChangeScribeMsg\\MessageTokenizor\\src\\main\\resources\\test-result\\msgtoken.json"
+                    );
+            MyFileUtils.generateDiffTokenAndMarkAndAtt(
+                    "G:\\DiffCommitFile\\ouput\\difftext_v2.txt",
+                    "G:\\nju.edu\\RegularizationOfChangeScribeMsg\\MessageTokenizor\\src\\main\\resources\\test-result\\difftoken.json",
+                    "G:\\nju.edu\\RegularizationOfChangeScribeMsg\\MessageTokenizor\\src\\main\\resources\\test-result\\diffmark.json",
+                    "G:\\nju.edu\\RegularizationOfChangeScribeMsg\\MessageTokenizor\\src\\main\\resources\\test-result\\diffatt.json"
+            );
             MyFileUtils.generateVariable(
-                    "G:\\nju.edu\\MessageTokenizor\\src\\main\\resources\\difftext_immutables.txt",
-                    "G:\\nju.edu\\MessageTokenizor\\src\\main\\resources\\test-result\\variable.json"
+                    "G:\\DiffCommitFile\\ouput\\difftext_v2.txt",
+                    "G:\\nju.edu\\RegularizationOfChangeScribeMsg\\MessageTokenizor\\src\\main\\resources\\test-result\\variable.json"
                     );
         } catch (Exception e){
             e.printStackTrace();

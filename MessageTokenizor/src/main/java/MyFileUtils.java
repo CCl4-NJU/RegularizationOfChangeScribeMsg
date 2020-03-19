@@ -144,15 +144,26 @@ public class MyFileUtils {
             for(String token : tempTokenList){
                 dataLine.append(", \"").append(token).append("\"");
                 markLine.append(", 0");
-                if(NameUtils.isClassName(token)||NameUtils.isMethodName(token)){
-                    String[] splitCamelWords = NameUtils.splitCamelName(token);
-                    StringBuilder camelStr = new StringBuilder();
-                    camelStr.append(", [\"").append(splitCamelWords[0]).append("\"");
-                    for(int i=1; i<splitCamelWords.length; i++){
-                        camelStr.append(", \"").append(splitCamelWords[i]).append("\"");
+                if(NameUtils.isClassName(token)||NameUtils.isMethodName(token)||NameUtils.isStaticVarName(token)){
+                    if(!NameUtils.isStaticVarName(token)) {
+                        String[] splitCamelWords = NameUtils.splitCamelName(token);
+                        StringBuilder camelStr = new StringBuilder();
+                        camelStr.append(", [\"").append(splitCamelWords[0]).append("\"");
+                        for (int i = 1; i < splitCamelWords.length; i++) {
+                            camelStr.append(", \"").append(splitCamelWords[i]).append("\"");
+                        }
+                        camelStr.append("]");
+                        attLine.append(camelStr.toString());
+                    } else{
+                        String[] splitSVWords = NameUtils.splitStaticVarName(token);
+                        StringBuilder sVarStr = new StringBuilder();
+                        sVarStr.append(", [\"").append(splitSVWords[0]).append("\"");
+                        for (int i = 1; i < splitSVWords.length; i++) {
+                            sVarStr.append(", \"").append(splitSVWords[i]).append("\"");
+                        }
+                        sVarStr.append("]");
+                        attLine.append(sVarStr.toString());
                     }
-                    camelStr.append("]");
-                    attLine.append(camelStr.toString());
                 } else{
                     attLine.append(", []");
                 }
@@ -252,6 +263,6 @@ public class MyFileUtils {
     }
 
     public static boolean isLetter(char c){
-        return (c>='a'&&c<='z')||(c>='A'&&c<='Z')||(c>='0'&&c<='9');
+        return (c>='a'&&c<='z')||(c>='A'&&c<='Z')||(c>='0'&&c<='9')||(c=='_');
     }
 }
