@@ -89,21 +89,20 @@ public class NameUtils {
     }
 
     public static String[] splitStaticVarName(String name)  {
-        String[] tempRes = name.split("_");
-        List<String> tokens = new ArrayList<>();
-        for(int i=0; i<tempRes.length; i++){
-            try{
-                Integer temp = Integer.valueOf(tempRes[i]);
-            } catch (Exception e){
-                tokens.add(tempRes[i].toLowerCase());
-            }
-        }
-        int num = tokens.size();
-        String[] result = new String[num];
-        for(int k=0; k<num; k++){
-            result[k] = tokens.get(k);
-        }
-
-        return result;
+//        String[] tempRes = name.split("_");
+//        List<String> tokens = new ArrayList<>();
+//        for(int i=0; i<tempRes.length; i++){
+//            try{
+//                Integer temp = Integer.valueOf(tempRes[i]);
+//            } catch (Exception e){
+//                tokens.add(tempRes[i].toLowerCase());
+//            }
+//        }
+//        int num = tokens.size();
+//        String[] result = new String[num];
+//        for(int k=0; k<num; k++){
+//            result[k] = tokens.get(k);
+//        }
+        return name.split("_");
     }
 }
