@@ -1,9 +1,7 @@
 import java.io.*;
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.nio.Buffer;
+import java.util.*;
 
 public class MyFileUtils {
     public static void changeTextToJson(String textpath, String jsonpath) throws Exception{
@@ -37,7 +35,7 @@ public class MyFileUtils {
         bufferedWriter.close();
     }
 
-    public static void generateMsg(String msgTextPath, String msgTokenJsonPath)
+    public static void generateMsg(String msgTextPath, String msgTokenJsonPath, Set<String> wordSet)
     throws Exception{
         BufferedReader rawMsgReader = new BufferedReader(new FileReader(new File(msgTextPath)));
         BufferedWriter msgTokenWriter = new BufferedWriter(new FileWriter(new File(msgTokenJsonPath)));
@@ -70,6 +68,11 @@ public class MyFileUtils {
                     dataLine.append(", ");
                 }
                 dataLine.append("\"").append(token).append("\"");
+
+                if(!isOOV(token)){
+                    wordSet.add(token.toLowerCase());
+                }
+
                 totalNum++;
                 firstWord = false;
                 if(totalNum >= maxNum){
@@ -85,7 +88,7 @@ public class MyFileUtils {
     }
 
     public static void generateDiffTokenAndMarkAndAtt(String diffTextPath, String diffTokenPath,
-                                                      String diffMarkPath, String diffAttPath)
+                                                      String diffMarkPath, String diffAttPath, Set<String> wordSet)
             throws Exception{
         BufferedReader diffTextReader = new BufferedReader(new FileReader(new File(diffTextPath)));
         BufferedWriter diffTokenWriter = new BufferedWriter(new FileWriter(new File(diffTokenPath)));
@@ -127,11 +130,19 @@ public class MyFileUtils {
                         index++;
                         if(index==len){
                             tempTokenList.add(tempToken.toString());
+                            if(!isOOV(tempToken.toString())){
+                                wordSet.add(tempToken.toString().toLowerCase());
+                            }
                         }
                     }
                     else{
                         if(tempToken.length()>=1) {
                             tempTokenList.add(tempToken.toString());
+
+                            if(!isOOV(tempToken.toString())){
+                                wordSet.add(tempToken.toString().toLowerCase());
+                            }
+
                             tempToken = new StringBuilder();
                         }
                         //tempTokenList.add(String.valueOf(c));
@@ -202,10 +213,14 @@ public class MyFileUtils {
         diffAttWriter.close();
     }
 
-    public static void generateVariable(String diffTextPath, String msgTextPath, String variablePath)throws Exception{
+    public static void generateVariable(String diffTextPath, String msgTextPath, String variablePath
+            , String numjsonPath)throws Exception{
         BufferedReader diffTextReader = new BufferedReader(new FileReader(new File(diffTextPath)));
         BufferedReader msgTextReader = new BufferedReader(new FileReader(new File(msgTextPath)));
         BufferedWriter variableWriter = new BufferedWriter(new FileWriter(new File(variablePath)));
+        BufferedWriter numjsonWriter = new BufferedWriter(new FileWriter(new File(numjsonPath)));
+
+        long nmCount = 0;
 
         variableWriter.write("[");
 
@@ -235,6 +250,7 @@ public class MyFileUtils {
                 boolean isM = NameUtils.isMethodName(word);
                 boolean isV = NameUtils.isStaticVarName(word);
                 if(isC||isM||isV){
+                    nmCount++;
                     boolean ifContains = varKeys.contains(word);
                     if(isC){
                         if(!ifContains){
@@ -271,18 +287,21 @@ public class MyFileUtils {
                     boolean ifContains = varKeys.contains(word2);
                     if(isC){
                         if(!ifContains){
+                            nmCount++;
                             varKeys.add(word2);
                             varVals.add("c"+String.valueOf(cIndex));
                             cIndex++;
                         }
                     } else if(isM){
                         if(!ifContains){
+                            nmCount++;
                             varKeys.add(word2);
                             varVals.add("m"+String.valueOf(mIndex));
                             mIndex++;
                         }
                     } else{
                         if(!ifContains){
+                            nmCount++;
                             varKeys.add(word2);
                             varVals.add("v"+String.valueOf(vIndex));
                             vIndex++;
@@ -308,12 +327,39 @@ public class MyFileUtils {
             variableWriter.write(tempGroup.toString());
         }
         variableWriter.write("]");
+        numjsonWriter.write(String.valueOf(nmCount));
+        numjsonWriter.close();
 
         diffTextReader.close();
         variableWriter.close();
     }
 
+    public static void generateWord2index(String word2indexPath, Set<String> words) throws Exception{
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File(word2indexPath)));
+        bufferedWriter.write("{\n");
+        bufferedWriter.write("\"<eos>\": 0,\n");
+        bufferedWriter.write("\"<start>\": 1,\n");
+        bufferedWriter.write("\"<unkm>\": 2");
+        int id = 3;
+        for(String word : words){
+            if(isEnglish(word)) {
+                bufferedWriter.write(",\n");
+                bufferedWriter.write("\"" + word + "\": " + id);
+                id++;
+            }
+        }
+        bufferedWriter.close();
+    }
+
     public static boolean isLetter(char c){
         return (c>='a'&&c<='z')||(c>='A'&&c<='Z')||(c>='0'&&c<='9')||(c=='_');
+    }
+
+    public static boolean isOOV(String word){
+        return NameUtils.isClassName(word)||NameUtils.isMethodName(word)||NameUtils.isStaticVarName(word);
+    }
+
+    public static boolean isEnglish(String charaString) {
+        return charaString.matches("^[a-zA-Z]*");
     }
 }

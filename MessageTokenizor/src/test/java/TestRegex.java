@@ -20,4 +20,9 @@ public class TestRegex {
         }
     }
 
+    @Test
+    public void testEnglish(){
+        System.out.println(MyFileUtils.isEnglish("asdfase2sags3544rg"));
+        System.out.println(MyFileUtils.isEnglish("apple"));
+    }
 }

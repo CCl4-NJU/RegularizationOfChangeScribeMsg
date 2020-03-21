@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f05b5803-c564-48f6-b9c8-431e624a140f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../commitjsonmsgtransfer/src/main/java/JsonMsgRegularizor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../commitjsonmsgtransfer/src/main/java/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../commitjsonmsgtransfer/src/main/resources/msg.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NameUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NameUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyFileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyFileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestRegex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRegex.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,39 +24,43 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MyFileUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+            <state relative-caret-position="232">
+              <caret line="329" column="53" selection-start-line="329" selection-start-column="53" selection-end-line="329" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/NameUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#splitCamelName#0;class#NameUtils#0" />
+                <element signature="method#changeTextToJson#0;class#MyFileUtils#0" />
+                <element signature="method#generateMsg#0;class#MyFileUtils#0" />
+                <element signature="method#generateDiffTokenAndMarkAndAtt#0;class#MyFileUtils#0" />
+                <element signature="e#13794#13795#0" expanded="true" />
+                <element signature="e#13879#13880#0" expanded="true" />
+                <element signature="e#14171#14172#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MyFileUtils.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="169" column="68" lean-forward="true" selection-start-line="169" selection-start-column="68" selection-end-line="169" selection-end-column="68" />
+            <state relative-caret-position="166">
+              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#changeTextToJson#0;class#MyFileUtils#0" />
-                <element signature="method#generateVariable#0;class#MyFileUtils#0" />
+                <element signature="method#main#0;class#Main#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestRegex.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+              <folding>
+                <element signature="method#testSplitSign#0;class#TestRegex#0" />
               </folding>
             </state>
           </provider>
@@ -73,6 +81,7 @@
       <find>email</find>
       <find>email&quot;, &quot;lookup</find>
       <find>_</find>
+      <find>splitting</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -85,10 +94,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/test-result/difftext_immutables.json" />
         <option value="$PROJECT_DIR$/src/main/resources/difftext_immutables.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/test-result/variable.json" />
+        <option value="$PROJECT_DIR$/src/main/java/NameUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestRegex.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyFileUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/NameUtils.java" />
       </list>
     </option>
   </component>
@@ -111,6 +120,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -169,7 +179,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -212,6 +221,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestRegex.testEnglish" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MessageTokenizor" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestRegex" />
+      <option name="METHOD_NAME" value="testEnglish" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestRegex.testRegexReplace" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MessageTokenizor" />
       <option name="PACKAGE_NAME" value="" />
@@ -232,16 +251,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestUtils.testSplitCamelName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MessageTokenizor" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestUtils" />
-      <option name="METHOD_NAME" value="testSplitCamelName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestUtils.testSplitStaticVarName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MessageTokenizor" />
       <option name="PACKAGE_NAME" value="" />
@@ -255,10 +264,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TestRegex.testEnglish" />
         <item itemvalue="JUnit.TestRegex.testSplitSign" />
         <item itemvalue="JUnit.TestRegex.testRegexReplace" />
         <item itemvalue="JUnit.TestUtils.testSplitStaticVarName" />
-        <item itemvalue="JUnit.TestUtils.testSplitCamelName" />
       </list>
     </recent_temporary>
   </component>
@@ -277,14 +286,13 @@
       <workItem from="1583926597254" duration="1063000" />
       <workItem from="1584585559764" duration="3261000" />
       <workItem from="1584614719502" duration="2170000" />
-      <workItem from="1584629753084" duration="374000" />
+      <workItem from="1584629753084" duration="1274000" />
+      <workItem from="1584675287142" duration="535000" />
+      <workItem from="1584784242090" duration="3506000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestRegex_testRegexReplace - 2020.03.11 at 10h 08m 11s.xml">
-      <configuration name="TestRegex.testRegexReplace" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestRegex_testRegexReplace - 2020.03.11 at 10h 08m 57s.xml">
       <configuration name="TestRegex.testRegexReplace" configurationId="JUnit" />
     </history-entry>
@@ -312,15 +320,18 @@
     <history-entry file="TestRegex_testSplitSign - 2020.03.19 at 10h 51m 11s.xml">
       <configuration name="TestRegex.testSplitSign" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestRegex_testEnglish - 2020.03.21 at 19h 13m 34s.xml">
+      <configuration name="TestRegex.testEnglish" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35565000" />
+    <option name="totallyTimeSpent" value="40506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15369128" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15771812" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -336,7 +347,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.328125" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32954547" />
@@ -419,53 +430,82 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/variableV12.json" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/difftokenVOriginal.json" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/msgtextV12.json" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestRegex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/msgVOriginal.json" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/diffattVOriginal.json" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/difftoken.json" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/diffmark.json" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/diffatt.json" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/msgtext.json" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/difftext.json" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/variable.json" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/diffatt.json" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/NameUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        <state relative-caret-position="442">
+          <caret line="90" column="60" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#splitCamelName#0;class#NameUtils#0" />
+            <element signature="method#splitStaticVarName#0;class#NameUtils#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/msgtoken.json">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/variable.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/NameUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/msgtoken.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
+        <state relative-caret-position="221">
+          <caret line="22" column="48" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestRegex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#splitCamelName#0;class#NameUtils#0" />
+            <element signature="method#testSplitSign#0;class#TestRegex#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/word2index.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256352">
+          <caret line="11515" column="14" lean-forward="true" selection-start-line="11515" selection-start-column="14" selection-end-line="11515" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MyFileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="169" column="68" lean-forward="true" selection-start-line="169" selection-start-column="68" selection-end-line="169" selection-end-column="68" />
+        <state relative-caret-position="232">
+          <caret line="329" column="53" selection-start-line="329" selection-start-column="53" selection-end-line="329" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#changeTextToJson#0;class#MyFileUtils#0" />
-            <element signature="method#generateVariable#0;class#MyFileUtils#0" />
+            <element signature="method#generateMsg#0;class#MyFileUtils#0" />
+            <element signature="method#generateDiffTokenAndMarkAndAtt#0;class#MyFileUtils#0" />
+            <element signature="e#13794#13795#0" expanded="true" />
+            <element signature="e#13879#13880#0" expanded="true" />
+            <element signature="e#14171#14172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test-result/num.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#Main#0" />
           </folding>
         </state>
       </provider>
