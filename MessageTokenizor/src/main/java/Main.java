@@ -14,7 +14,7 @@ public class Main {
                     DIFF_TEXT_PATH,
                     "G:\\nju.edu\\RegularizationOfChangeScribeMsg\\MessageTokenizor\\src\\main\\resources\\test-result\\difftext.json"
             );
-            MyFileUtils.changeTextToJson(
+            MyFileUtils.changeMsgText2MsgJson(
                     MSG_TEXT_PATH,
                     "G:\\nju.edu\\RegularizationOfChangeScribeMsg\\MessageTokenizor\\src\\main\\resources\\test-result\\msgtext.json"
                     );

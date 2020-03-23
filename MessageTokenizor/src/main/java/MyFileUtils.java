@@ -35,6 +35,30 @@ public class MyFileUtils {
         bufferedWriter.close();
     }
 
+    public static void changeMsgText2MsgJson(String msgtextPaht, String msgjsonPath) throws Exception{
+        BufferedReader reader = new BufferedReader(new FileReader(new File(msgtextPaht)));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(new File(msgjsonPath)));
+
+        String line = null;
+        writer.write("{\n");
+
+        while((line=reader.readLine())!=null){
+            String[] words = line.split("\\W+");
+            StringBuilder writeLine = new StringBuilder();
+            for(String word:words){
+                writeLine.append(word).append(" ");
+            }
+            writer.write("\"");
+            writer.write(writeLine.toString());
+            writer.write("\"");
+            writer.write(",\n");
+        }
+
+        writer.write("}");
+        writer.close();
+        reader.close();
+    }
+
     public static void generateMsg(String msgTextPath, String msgTokenJsonPath, Set<String> wordSet)
     throws Exception{
         BufferedReader rawMsgReader = new BufferedReader(new FileReader(new File(msgTextPath)));
@@ -221,6 +245,7 @@ public class MyFileUtils {
         BufferedWriter numjsonWriter = new BufferedWriter(new FileWriter(new File(numjsonPath)));
 
         long nmCount = 0;
+        Set<String> varSet = new HashSet<>();
 
         variableWriter.write("[");
 
@@ -250,22 +275,25 @@ public class MyFileUtils {
                 boolean isM = NameUtils.isMethodName(word);
                 boolean isV = NameUtils.isStaticVarName(word);
                 if(isC||isM||isV){
-                    nmCount++;
+                    varSet.add(word.toLowerCase());
                     boolean ifContains = varKeys.contains(word);
                     if(isC){
                         if(!ifContains){
+                            nmCount++;
                             varKeys.add(word);
                             varVals.add("c"+String.valueOf(cIndex));
                             cIndex++;
                         }
                     } else if(isM){
                         if(!ifContains){
+                            nmCount++;
                             varKeys.add(word);
                             varVals.add("m"+String.valueOf(mIndex));
                             mIndex++;
                         }
                     } else{
                         if(!ifContains){
+                            nmCount++;
                             varKeys.add(word);
                             varVals.add("v"+String.valueOf(vIndex));
                             vIndex++;
@@ -284,6 +312,7 @@ public class MyFileUtils {
                 boolean isM = NameUtils.isMethodName(word2);
                 boolean isV = NameUtils.isStaticVarName(word2);
                 if(isC||isM||isV){
+                    varSet.add(word2.toLowerCase());
                     boolean ifContains = varKeys.contains(word2);
                     if(isC){
                         if(!ifContains){
@@ -327,7 +356,7 @@ public class MyFileUtils {
             variableWriter.write(tempGroup.toString());
         }
         variableWriter.write("]");
-        numjsonWriter.write(String.valueOf(nmCount));
+        numjsonWriter.write(String.valueOf(varSet.size()));
         numjsonWriter.close();
 
         diffTextReader.close();
@@ -348,6 +377,7 @@ public class MyFileUtils {
                 id++;
             }
         }
+        bufferedWriter.write("}");
         bufferedWriter.close();
     }
 

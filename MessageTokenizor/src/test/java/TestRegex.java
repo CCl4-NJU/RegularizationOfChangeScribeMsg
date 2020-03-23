@@ -25,4 +25,10 @@ public class TestRegex {
         System.out.println(MyFileUtils.isEnglish("asdfase2sags3544rg"));
         System.out.println(MyFileUtils.isEnglish("apple"));
     }
+
+    @Test
+    public void testW(){
+        String line = "asdfd\"sswe 4#@\"sda ds\"sdd";
+        System.out.println(line.split("\\W+").length);
+    }
 }
